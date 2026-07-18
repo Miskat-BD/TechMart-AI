@@ -26,9 +26,9 @@ export default function RootLayout({ children }) {
       theme-data='light'
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-screen flex flex-col bg-white dark:bg-slate-950 transition-colors duration-300 antialiased">
         <Navbar />
-        <main>{children}</main>
+        <main className="flex-grow">{children}</main>
         <Toaster />
         <Footer />
       </body>

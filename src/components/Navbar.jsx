@@ -56,18 +56,22 @@ export default function Navbar() {
             >
               All Products
             </Link>
-            <Link
-              href="/add-products"
-              className="text-sm font-medium text-slate-700 hover:text-emerald-600 transition-colors duration-200 dark:text-slate-300 dark:hover:text-emerald-400"
-            >
-              Add Products
-            </Link>
-            <Link
-              href="/manage-products"
-              className="text-sm font-medium text-slate-700 hover:text-emerald-600 transition-colors duration-200 dark:text-slate-300 dark:hover:text-emerald-400"
-            >
-              Manage Products
-            </Link>
+            {session?.user && (
+              <>
+                <Link
+                  href="/add-products"
+                  className="text-sm font-medium text-slate-700 hover:text-emerald-600 transition-colors duration-200 dark:text-slate-300 dark:hover:text-emerald-400"
+                >
+                  Add Products
+                </Link>
+                <Link
+                  href="/manage-products"
+                  className="text-sm font-medium text-slate-700 hover:text-emerald-600 transition-colors duration-200 dark:text-slate-300 dark:hover:text-emerald-400"
+                >
+                  Manage Products
+                </Link>
+              </>
+            )}
           </nav>
 
           {/* Desktop Auth Button */}
@@ -135,19 +139,30 @@ export default function Navbar() {
             Home
           </Link>
           <Link
-            href="/dashboard"
+            href="/all-products"
             onClick={() => setMobileMenuOpen(false)}
             className="block rounded-lg px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-emerald-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-emerald-400"
           >
-            Dashboard
+            All Products
           </Link>
-          <Link
-            href="/checkout"
-            onClick={() => setMobileMenuOpen(false)}
-            className="block rounded-lg px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-emerald-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-emerald-400"
-          >
-            Checkout
-          </Link>
+          {session?.user && (
+            <>
+              <Link
+                href="/add-products"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block rounded-lg px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-emerald-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-emerald-400"
+              >
+                Add Products
+              </Link>
+              <Link
+                href="/manage-products"
+                onClick={() => setMobileMenuOpen(false)}
+                className="block rounded-lg px-3 py-2 text-base font-medium text-slate-700 hover:bg-slate-50 hover:text-emerald-600 dark:text-slate-300 dark:hover:bg-slate-800 dark:hover:text-emerald-400"
+              >
+                Manage Products
+              </Link>
+            </>
+          )}
 
           <div className="mt-4 border-t border-slate-100 pt-4 dark:border-slate-800 flex flex-col gap-2">
             {isPending ? (
