@@ -9,7 +9,7 @@ import toast from "react-hot-toast";
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const router = useRouter();
-  
+
   // Use session client from better-auth
   const { data: session, isPending } = authClient.useSession();
 
@@ -44,23 +44,29 @@ export default function Navbar() {
 
           {/* Desktop Nav Links */}
           <nav className="hidden md:flex items-center gap-8">
-            <Link 
-              href="/" 
+            <Link
+              href="/"
               className="text-sm font-medium text-slate-700 hover:text-emerald-600 transition-colors duration-200 dark:text-slate-300 dark:hover:text-emerald-400"
             >
               Home
             </Link>
-            <Link 
-              href="/dashboard" 
+            <Link
+              href="/all-products"
               className="text-sm font-medium text-slate-700 hover:text-emerald-600 transition-colors duration-200 dark:text-slate-300 dark:hover:text-emerald-400"
             >
-              Dashboard
+              All Products
             </Link>
-            <Link 
-              href="/checkout" 
+            <Link
+              href="/add-products"
               className="text-sm font-medium text-slate-700 hover:text-emerald-600 transition-colors duration-200 dark:text-slate-300 dark:hover:text-emerald-400"
             >
-              Checkout
+              Add Products
+            </Link>
+            <Link
+              href="/manage-products"
+              className="text-sm font-medium text-slate-700 hover:text-emerald-600 transition-colors duration-200 dark:text-slate-300 dark:hover:text-emerald-400"
+            >
+              Manage Products
             </Link>
           </nav>
 
@@ -115,10 +121,9 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div 
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          mobileMenuOpen ? "max-h-72 border-t border-slate-100 dark:border-slate-800" : "max-h-0"
-        }`}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? "max-h-72 border-t border-slate-100 dark:border-slate-800" : "max-h-0"
+          }`}
         id="mobile-menu"
       >
         <div className="space-y-1 px-4 pb-4 pt-3 bg-white dark:bg-slate-900">
@@ -143,7 +148,7 @@ export default function Navbar() {
           >
             Checkout
           </Link>
-          
+
           <div className="mt-4 border-t border-slate-100 pt-4 dark:border-slate-800 flex flex-col gap-2">
             {isPending ? (
               <div className="h-10 w-full animate-pulse rounded-lg bg-slate-200 dark:bg-slate-800" />

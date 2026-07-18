@@ -11,7 +11,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-white dark:bg-slate-950 transition-colors duration-300">
-      <Navbar />
+
       <main className="flex-grow">
         <Hero />
         <Categories />
@@ -20,7 +20,7 @@ export default function Home() {
         <Testimonials />
         <Newsletter />
       </main>
-      <Footer />
+
     </div>
   );
 }
