@@ -56,7 +56,7 @@ export default function FeaturedProducts() {
   return (
     <section className="bg-white py-20 dark:bg-slate-900 transition-colors duration-300">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Heading */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
@@ -67,18 +67,17 @@ export default function FeaturedProducts() {
               Equip yourself with the best-selling, top-rated intelligence gadgets of the season. Handpicked, AI-verified performance.
             </p>
           </div>
-          
+
           {/* Category Filter Pills */}
           <div className="flex flex-wrap gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none max-w-full">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`rounded-full px-5 py-2 text-xs font-semibold whitespace-nowrap transition-all duration-300 ${
-                  selectedCategory === cat
-                    ? "bg-emerald-600 text-white shadow-md shadow-emerald-500/10"
-                    : "bg-slate-100 hover:bg-slate-200 text-slate-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300"
-                }`}
+                className={`rounded-full px-5 py-2 text-xs font-semibold whitespace-nowrap transition-all duration-300 ${selectedCategory === cat
+                  ? "bg-emerald-600 text-white shadow-md shadow-emerald-500/10"
+                  : "bg-slate-100 hover:bg-slate-200 text-slate-600 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300"
+                  }`}
               >
                 {cat}
               </button>
@@ -99,8 +98,8 @@ export default function FeaturedProducts() {
         {!loading && error && (
           <div className="text-center py-16">
             <p className="text-rose-500 font-semibold mb-2">{error}</p>
-            <button 
-              onClick={() => window.location.reload()} 
+            <button
+              onClick={() => window.location.reload()}
               className="px-4 py-2 bg-slate-150 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-700 dark:text-slate-200 rounded-xl transition font-medium text-sm"
             >
               Retry
@@ -112,7 +111,7 @@ export default function FeaturedProducts() {
         {!loading && !error && (
           <>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              {displayedProducts.map((product) => (
+              {displayedProducts.slice(0, 4).map((product) => (
                 <ProductCard key={product._id || product.id} product={product} />
               ))}
             </div>
