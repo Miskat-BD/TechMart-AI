@@ -1,36 +1,161 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🛒 TechMart AI
 
-## Getting Started
+A modern full-stack e-commerce web application built with Next.js, Express.js, MongoDB, and AI integration. TechMart AI provides users with a seamless shopping experience, secure authentication, product management, and an intelligent AI assistant to help users discover products and answer their questions.
 
-First, run the development server:
+## 🚀 Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Frontend: https://techmart-ai-topaz.vercel.app
+
+---
+
+## 📌 Features
+
+- 🔐 Secure Authentication (JWT)
+- 🔑 Google Login
+- 🛍️ Browse All Products
+- 🔍 Search, Filter & Sort Products
+- 📄 Product Details Page
+- ➕ Add New Product (Protected)
+- 📝 Manage Own Products
+- ❌ Delete Products
+- 🤖 AI Chat Assistant (Powered by Groq AI)
+- 📱 Fully Responsive Design
+- ⚡ Fast and Modern UI
+- Skeleton Loading
+- Protected Routes
+- Clean & Reusable Components
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- Next.js
+- JavaScript
+- Tailwind CSS
+- Axios
+- React Icons
+- Better Auth
+
+### Backend
+
+- Node.js
+- Express.js
+- MongoDB
+- JWT Authentication
+- Groq AI API
+- CORS
+- Dotenv
+
+---
+
+## 🔑 Environment Variables
+
+### Frontend (.env)
+
+```env
+NEXT_PUBLIC_API_URL=
+BETTER_AUTH_SECRET=
+BETTER_AUTH_URL=
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Backend (.env)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```env
+PORT=
+MONGO_DB_URI=
+DB_NAME=
+JWT_SECRET=
+GROQ_API_KEY=
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ⚙️ Installation
 
-To learn more about Next.js, take a look at the following resources:
+### Clone Repository
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+git clone https://github.com/your-username/TechMart-AI.git
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Frontend
 
-## Deploy on Vercel
+```bash
+cd client
+npm install
+npm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Backend
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+cd server
+npm install
+npm run dev
+```
+
+---
+
+## 📷 Pages
+
+- Home
+- Explore Products
+- Product Details
+- Login
+- Register
+- Add Product
+- Manage Products
+- About
+- Contact
+
+---
+
+## 🤖 AI Feature
+
+TechMart AI includes an intelligent AI Chat Assistant powered by **Groq AI**.
+
+It can:
+
+- Answer product-related questions
+- Help users navigate the website
+- Recommend products
+- Provide instant assistance
+
+---
+
+## 🔒 Authentication
+
+- JWT Authentication
+- Google Login
+- Protected Routes
+- User Authorization
+
+---
+
+## 📱 Responsive Design
+
+The application is fully responsive for:
+
+- Desktop
+- Tablet
+- Mobile
+
+---
+
+## 👨‍💻 Author
+
+**Miskat Bin Habib**
+
+- Email: miskatbinhabib19@gmail.com
+- GitHub: https://github.com/Miskat-BD
+- LinkedIn: https://www.linkedin.com/in/miskat-bin-habib
+
+---
+
+## ⭐ If you like this project
+
+Please consider giving it a ⭐ on GitHub.
